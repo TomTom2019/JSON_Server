@@ -1,8 +1,11 @@
+import HomePosts from './homePosts.js'
+
+
 
 const Home = () =>{
 	return(
 		<>
-          Home
+          <HomePosts/>
 		</>
 		)
 }
