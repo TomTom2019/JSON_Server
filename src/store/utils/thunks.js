@@ -2,6 +2,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios';
 const URL_SERV = "http://localhost:3001";
 
+
+////POSTS
+
 export const fetchPosts = createAsyncThunk(
     'posts/fetchPosts',
     async({page=1,order="asc",limit="10"},{ getState })=>{
@@ -12,7 +15,8 @@ export const fetchPosts = createAsyncThunk(
        
         return{
          items:[...prevState.articles.items,...response.data],
-         page:page
+         page:page,
+         end:response.data.length === 0 ? true : false
         }
 
     	}catch(error){
