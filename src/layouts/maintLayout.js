@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer,toast  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MainLayout = (props) => {
 	return (

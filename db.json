@@ -203,12 +203,32 @@
   ],
   "newsletter": [
     {
-      "email": "titi@gmail.com",
+      "email": "tom@gmail.com",
       "id": 1
     },
     {
-      "email": "tom@gmail.com",
+      "email": "daless2000be@yandex.com",
       "id": 2
+    },
+    {
+      "email": "t910935@gmail.com",
+      "id": 3
+    },
+    {
+      "email": "test@gmail.com",
+      "id": 4
+    },
+    {
+      "email": "data@yahoo.fr",
+      "id": 5
+    },
+    {
+      "email": "titi@gmail.com",
+      "id": 6
+    },
+    {
+      "email": "tititit@gmail.com",
+      "id": 7
     }
   ],
   "contact": []

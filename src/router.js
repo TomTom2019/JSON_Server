@@ -4,7 +4,7 @@ import Home from "./components/home";
 import PostComponent from "./components/posts";
 import Contact from "./components/contact";
 import Header from "./components/header.js"
-import MainLayout from "./layouts/maintLayout.js"
+import MainLayout from "./layouts/maintLayout"
 
 
 const Router = () => {
