@@ -24,7 +24,7 @@ export const fetchPosts = createAsyncThunk(
     }
 );
 
-////POST BY ID
+
 export const fetchPostById = createAsyncThunk(
     "posts/fetchPostById",
     async (id) => {
@@ -35,16 +35,16 @@ export const fetchPostById = createAsyncThunk(
             throw error;
         }
     }
-);
+)
 
-//// NEWSLETTER
+
 export const addToNewsletter = createAsyncThunk(
     "users/addToNewsletter",
     async (data) => {
         try {
             const findUser = await axios.get(
                 `${URL_SERV}/newsletter?email=${data.email}`
-            );
+            )
 
             if (!Array.isArray(findUser.data) || !findUser.data.length) {
                 const response = await axios({

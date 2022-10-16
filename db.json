@@ -203,32 +203,44 @@
   ],
   "newsletter": [
     {
-      "email": "tom@gmail.com",
+      "email": "steve@gmail.com",
       "id": 1
     },
     {
-      "email": "daless2000be@yandex.com",
+      "email": "francis@gmail.com",
       "id": 2
     },
     {
-      "email": "t910935@gmail.com",
+      "email": "mike@gmail.com",
       "id": 3
     },
     {
-      "email": "test@gmail.com",
+      "email": "ron@gmail.com",
       "id": 4
     },
     {
-      "email": "data@yahoo.fr",
+      "email": "Mike@gmail.com",
       "id": 5
     },
     {
-      "email": "titi@gmail.com",
+      "email": "miles@gmail.com",
       "id": 6
     },
     {
-      "email": "tititit@gmail.com",
+      "email": "t910935@gmail.com",
       "id": 7
+    },
+    {
+      "email": "tom@gmail.com",
+      "id": 8
+    },
+    {
+      "email": "test@gmail.com",
+      "id": 9
+    },
+    {
+      "email": "daless2000be@yandex.com",
+      "id": 10
     }
   ],
   "contact": []
