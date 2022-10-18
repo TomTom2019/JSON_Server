@@ -3,6 +3,8 @@ import * as Yup from 'yup'
 import { Alert } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 
+import {sendMessage} from '../../store/utils/thunks'
+import {showToast} from '../utils/tools'
 
 const Contact = () =>{
   const dispatch = useDispatch();
@@ -22,9 +24,21 @@ const Contact = () =>{
 
   	}),
   	onSubmit:(values,{resetForm})=>{
-       ////
-       console.log(values)
-  	}
+      
+       dispatch(sendMessage(values))
+       .unwrap()
+       .then((response)=>{
+       	 if(response){
+       	 resetForm()
+       	 	showToast('SUCCESS')
+       	 }
+       })
+       .catch(err=>{
+       	showToast('error')
+       })
+
+     } 
+         
   })
 
 
@@ -82,6 +96,29 @@ const Contact = () =>{
 
 		 	  	  	:null}
 		 	  </div>
+
+		 	    <div className="form-group mt-2">
+		 	  	  <label htmlFor="message">Message</label>
+		 	  	  
+		 	  	  <textarea
+                   className="form-control"
+                   name="message"
+                   rows={3}
+                     {...formik.getFieldProps('message')}
+
+		 	  	  />
+                  
+		 	  	  
+		 	  	  {formik.errors.message && formik.touched.message ?
+                     <Alert variant="danger">
+                     	{formik.errors.message}
+                     </Alert>
+
+		 	  	  	:null}
+		 	  </div>
+		 	  <button type='submit' className='btn btn-primary mt-2'>
+		 	  	Send message
+		 	  </button>
 		 </form>
 
 
